@@ -4,6 +4,8 @@ const userSchema = new Schema({
   lastName: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
+  dateOfBirth: { type: Date, require: true },
+  preferredArtist: { type: String },
   createdAt: { type: Date, default: Date.now }
 });
 
