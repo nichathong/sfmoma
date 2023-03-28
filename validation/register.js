@@ -7,6 +7,7 @@ module.exports = function validRegister(data){
     data.lastname = validText(data.lastname) ? data.lastname : ''
     data.email = validText(data.email) ? data.email : ''
     data.password = validText(data.password) ? data.password : ''
+    data.dateOfBirth = validText(data.dateOfBirth) ? data.dateOfBirth : ''
 
       if (!Validator.isLength(data.firstname, { min: 2, max: 30 })) {
         errors.firstname = 'Firstname must be between 2 and 30 characters';
@@ -38,6 +39,10 @@ module.exports = function validRegister(data){
 
       if (!Validator.isLength(data.password, { min: 6, max: 30 })) {
         errors.password = 'Password must be at least 6 characters';
+      }
+
+      if (!Validator.isISO8601(data.dateOfBirth)) {
+        errors.dateOfBirth = 'Date of Birth is invalid'
       }
     
       return {
