@@ -1,0 +1,22 @@
+{
+  "name": "sfmoma",
+  "version": "1.0.0",
+  "description": "Curating personalized experiences many consumers are coming to expect for the event in order to retain attendees as return customers ([Source](https://getjobfit.com/company/-L1PrJR0thNqdwYuvFsE/products/-L1PrJR0thNqdwYuvFsE?queryID=5c19ef05eebe3e8ba50a9d8c4d1c888f&positions=1))",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nichathong/sfmoma.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nichathong/sfmoma/issues"
+  },
+  "homepage": "https://github.com/nichathong/sfmoma#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

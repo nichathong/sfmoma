@@ -1,4 +1,5 @@
 ## Problem
+
 Curating personalized experiences many consumers are coming to expect for the event in order to retain attendees as return customers ([Source](https://getjobfit.com/company/-L1PrJR0thNqdwYuvFsE/products/-L1PrJR0thNqdwYuvFsE?queryID=5c19ef05eebe3e8ba50a9d8c4d1c888f&positions=1))
 
 - Te goal of this project is to create a better exrience for the visitors and encourage them to come back through invition, news and ads.
