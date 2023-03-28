@@ -1,41 +1,61 @@
+# Event Ticketing System with NFC
+
+## Overview
+
+This project aims to create a personalized and convenient event ticketing system for visitors using Near Field Communication (NFC) technology. The system provides NFC-enabled tickets that store visitors' information, such as name, age, email, and preferred artists. The information is used to personalize exhibition recommendations, events, and VIP experiences. 
+
+*What is NFC?*
+- Near Field Communication (NFC) is a short-range wireless technology that enables two devices to communicate with each other when they are brought close together. It is often used for contactless payments, data transfer, and access control.
+
 ## Problem
 
-Curating personalized experiences many consumers are coming to expect for the event in order to retain attendees as return customers ([Source](https://getjobfit.com/company/-L1PrJR0thNqdwYuvFsE/products/-L1PrJR0thNqdwYuvFsE?queryID=5c19ef05eebe3e8ba50a9d8c4d1c888f&positions=1))
-
-- The goal of this project is to create a better exrience for the visitors and encourage them to come back through invition, news and ads.
-- The current ticket system is outdated and was not personalized to the visitors. The ticket displayed should not display the same information for every visiting customers
-
-## Solve the problems
-
-- Using *NFC technology* to provide the visitors with NFC-enabled tickets
-
-- Create a registration form to collect visitors information prior or after purchase the tickets
-    - collect: *name, age, email, liked-artisit, preferred artist* 
-    - make sure the secure data and authentication
-
-- Analyze visitors profiel to analyze and personalize exhibition recommendation or events. This could be future on shows on the visit day
-
-- The ticket will collect some data relevent to the visitors 
-    - collect: *name, time, location, exhibit visited*
-
-- The data can be use to invite them to VIP events or behind the scene
-
-- Create VIP experince for return visitors
-
-## How
-
-- Store the data in a database using MongoDB to store database and Node.js for backend and Express.js for the server. React.js will be used for frontend
-
-### Back End technology
-- Node.js and Express framework
-- There are  a few possibilities to for database option
-  - MongoDB, SQL
-
-### Front End technology
-- React.js - to display exhibit information
+Many visitors nowsaday expect personalized experiences in order to retain them as return customers ([Source](https://getjobfit.com/company/-L1PrJR0thNqdwYuvFsE/products/-L1PrJR0thNqdwYuvFsE?queryID=5c19ef05eebe3e8ba50a9d8c4d1c888f&positions=1)). However, the current ticket system is not display personalized information for every visiting customer and is outdated.
 
 
-**possible implementation**
-- Use React.js to display information about the exhibits and personalized recommendations based on visitor data
-- Stripe for payment processing
-- Keep track of all the exhibits they visited, how long do they spend there etc. (have NFC scan around the exhibition)
+## Solution
+
+Using *NFC technology* to provide the visitors with NFC-enabled tickets, and and creating a registration form to collect their information prior to or after purchasing tickets. The information collected should include name, age, email, liked artists, and preferred artists. The collected data should be stored securely and authenticated.
+
+Analyzing visitors' profiles, personalize exhibition recommendations or events based on their preferences, and the exhibits they visit on the day of the event.
+
+The data collected from the tickets can be used to invite visitors to VIP events or behind the scenes activities, and create VIP experiences for return visitors.
+
+Backend:
+
+- Node.js with Express framework
+- MongoDB or SQL for database storage
+
+Frontend:
+
+- React.js to display exhibit information 
+
+Payment processing:
+
+- Stripe
+
+**Example of data when we retrieved from GET request in the database**
+
+```javascript
+[
+  {
+    "id": "123456789",
+    "name": "Raplh Doe",
+    "time": "2023-04-01T14:30:00Z",
+    "location": "Exhibit Hall A",
+    "exhibit": "987654321"
+  },
+  {
+    "id": "987654321",
+    "name": "Jane Simpson",
+    "time": "2023-04-01T15:15:00Z",
+    "location": "Exhibit Hall B",
+    "exhibit": "123456789"
+  }
+]
+```
+**Possible Implementation**
+
+- Keep track of all the exhibits they visited, how long do they spend there etc. (have NFC scan around the exhibition). This information can be used to further personalize recommendations and experiences for visitors.
+
+### Conclusion
+The project aims to create a better experience for visitors by using NFC-enabled tickets and personalized recommendations. By providing a seamless and convenient experience, the system encourages visitors to return and recommend the event to others.

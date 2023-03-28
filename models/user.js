@@ -6,7 +6,7 @@ const userSchema = new Schema({
   password: { type: String, required: true },
   dateOfBirth: { type: Date, require: true },
   preferredArtist: { type: String },
-  createdAt: { type: Date, default: Date.now }
+  createdAt: { type: String, default: Date.now }
 });
 
 // Create User model from schema
